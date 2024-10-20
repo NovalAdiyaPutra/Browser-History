@@ -8,12 +8,12 @@ public class RiwayatBrowser {
         riwayat = new Stack<>();
     }
 
-    public void jelajah(String website) {
+    public void browse(String website) {
         riwayat.push(website);
         System.out.println("Menjelajah ke: " + website);
     }
 
-    public void kembali() {
+    public void back() {
         if (riwayat.isEmpty()) {
             System.out.println("Tidak ada riwayat untuk kembali!");
         } else {
@@ -21,7 +21,7 @@ public class RiwayatBrowser {
         }
     }
 
-    public void lihat() {
+    public void view() {
         if (riwayat.isEmpty()) {
             System.out.println("Tidak ada riwayat penjelajahan.");
         } else {
@@ -51,13 +51,13 @@ public class RiwayatBrowser {
                 case 1:
                     System.out.print("Masukkan URL website: ");
                     String website = scanner.nextLine();
-                    riwayatBrowser.jelajah(website);
+                    riwayatBrowser.browse(website);
                     break;
                 case 2:
-                    riwayatBrowser.lihat();
+                    riwayatBrowser.view();
                     break;
                 case 3:
-                    riwayatBrowser.kembali();
+                    riwayatBrowser.back();
                     break;
                 case 4:
                     System.out.println("Keluar...");
@@ -70,3 +70,4 @@ public class RiwayatBrowser {
         scanner.close();
     }
 }
+
